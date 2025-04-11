@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CapyNFT - Product Details">
+    <title>CapyNFT - Product Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="capilogo.jpg" alt="CapyNFT Logo" width="40" height="40" class="d-inline-block align-text-top">
+                CapyNFT
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <main class="container py-5 mt-5">
+        <a href="market.html" class="back-to-marketplace text-decoration-none text-dark">
+            <i class="bi bi-arrow-left me-2"></i> Back to Marketplace
+        </a>
+        <div id="product-container">
+            <!-- Product content will be dynamically inserted here -->
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-products mt-5">
+            <h3 class="text-center mb-4">You Might Also Like</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="capiproduct7.jpg" class="card-img-top" alt="CapiRage">
+                        <div class="card-body">
+                            <h5 class="card-title">CapiRage</h5>
+                            <p class="card-text">A fiery capybara that won't tolerate nonsense!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$18.49</span>
+                                <a href="product.html?product=7" class="btn btn-sm btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="capiproduct8.jpg" class="card-img-top" alt="CapiKnight">
+                        <div class="card-body">
+                            <h5 class="card-title">CapiKnight</h5>
+                            <p class="card-text">A noble capybara, ready to protect and serve the NFT kingdom.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$11.99</span>
+                                <a href="product.html?product=8" class="btn btn-sm btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="capiproduct9.jpg" class="card-img-top" alt="CapiDraw">
+                        <div class="card-body">
+                            <h5 class="card-title">CapiDraw</h5>
+                            <p class="card-text">The artistic capybara, creating NFT masterpieces daily.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$14.99</span>
+                                <a href="product.html?product=9" class="btn btn-sm btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>CapyNFT</h5>
+                    <p>The Ultimate Capybara NFT Marketplace</p>
+                    <p>&copy; 2023 CapyNFT. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="index.html#about" class="text-white">About Us</a></li>
+                        <li><a href="index.html#products" class="text-white">Products</a></li>
+                        <li><a href="index.html#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Product Details Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedProduct = urlParams.get("product");
+            const productContainer = document.getElementById("product-container");
+            
+            // Product data
+            const products = {
+                "1": {
+                    name: "CapiCheers",
+                    image: "capiproduct1.jpg",
+                    price: "$10.99",
+                    description: "A joyful capybara who loves to party and spread happiness. This NFT comes with VIP access to our community events and exclusive airdrops throughout the year.",
+                    details: [
+                        "Limited edition of 1000 copies",
+                        "Includes commercial usage rights",
+                        "10% royalty on secondary sales",
+                        "Access to private Discord channel"
+                    ]
+                },
+                "2": {
+                    name: "CapiFlex",
+                    image: "capiproduct2.jpg",
+                    price: "$12.99",
+                    description: "The strongest capybara in town, always flexing its mighty muscles. Owners get access to our fitness challenges and wellness content.",
+                    details: [
+                        "Limited edition of 750 copies",
+                        "Includes commercial usage rights",
+                        "7.5% royalty on secondary sales",
+                        "Access to fitness challenges"
+                    ]
+                },
+                "3": {
+                    name: "CapiBang",
+                    image: "capiproduct3.jpg",
+                    price: "$15.49",
+                    description: "An action-packed capybara, always ready for an adventure! Unlocks exclusive game content and adventure challenges.",
+                    details: [
+                        "Limited edition of 500 copies",
+                        "Includes commercial usage rights",
+                        "5% royalty on secondary sales",
+                        "Unlocks game content"
+                    ]
+                },
+                "4": {
+                    name: "CapiChill",
+                    image: "capiproduct4.jpg",
+                    price: "$8.99",
+                    description: "A laid-back capybara, enjoying sunglasses, good food, and lazy afternoons. Grants access to relaxation content and meditation sessions.",
+                    details: [
+                        "Limited edition of 1500 copies",
+                        "Includes commercial usage rights",
+                        "5% royalty on secondary sales",
+                        "Access to wellness content"
+                    ]
+                },
+                "5": {
+                    name: "CapiDeal",
+                    image: "capiproduct5.jpg",
+                    price: "$9.99",
+                    description: "The business-savvy capybara, always closing the best deals. Provides discounts on future purchases and trading benefits.",
+                    details: [
+                        "Limited edition of 1200 copies",
+                        "Includes commercial usage rights",
+                        "5% royalty on secondary sales",
+                        "10% discount on future purchases"
+                    ]
+                },
+                "6": {
+                    name: "CapiShock",
+                    image: "capiproduct6.jpg",
+                    price: "$20.99",
+                    description: "The most surprised capybara, always in awe of life's twists. Comes with surprise airdrops and mystery boxes.",
+                    details: [
+                        "Limited edition of 300 copies",
+                        "Includes commercial usage rights",
+                        "10% royalty on secondary sales",
+                        "Monthly surprise airdrops"
+                    ]
+                },
+                "7": {
+                    name: "CapiRage",
+                    image: "capiproduct7.jpg",
+                    price: "$18.49",
+                    description: "A fiery capybara that won't tolerate nonsense! Owners get exclusive access to our rage-themed content and events.",
+                    details: [
+                        "Limited edition of 400 copies",
+                        "Includes commercial usage rights",
+                        "8% royalty on secondary sales",
+                        "Access to rage-themed events"
+                    ]
+                },
+                "8": {
+                    name: "CapiKnight",
+                    image: "capiproduct8.jpg",
+                    price: "$11.99",
+                    description: "A noble capybara, ready to protect and serve the NFT kingdom. Grants access to knightly quests and tournaments.",
+                    details: [
+                        "Limited edition of 800 copies",
+                        "Includes commercial usage rights",
+                        "6% royalty on secondary sales",
+                        "Access to exclusive tournaments"
+                    ]
+                },
+                "9": {
+                    name: "CapiDraw",
+                    image: "capiproduct9.jpg",
+                    price: "$14.99",
+                    description: "The artistic capybara, creating NFT masterpieces daily. Comes with art tutorials and creative challenges.",
+                    details: [
+                        "Limited edition of 600 copies",
+                        "Includes commercial usage rights",
+                        "7% royalty on secondary sales",
+                        "Access to art tutorials"
+                    ]
+                },
+                "10": {
+                    name: "CapiRoyal",
+                    image: "capiproduct10.jpg",
+                    price: "$99.99",
+                    description: "The majestic royal capybara, ruler of all NFT lands. Owners get VIP treatment in our community.",
+                    details: [
+                        "Ultra rare 1/1 edition",
+                        "Includes full commercial rights",
+                        "15% royalty on secondary sales",
+                        "VIP community status",
+                        "Exclusive governance rights"
+                    ]
+                },
+                "11": {
+                    name: "CapiLegend",
+                    image: "capiproduct11.jpg",
+                    price: "$49.99",
+                    description: "The legendary capybara from ancient NFT mythology. Grants access to legendary drops and lore.",
+                    details: [
+                        "Legendary edition of 10 copies",
+                        "Includes full commercial rights",
+                        "12% royalty on secondary sales",
+                        "Access to legendary drops",
+                        "Early access to all new collections"
+                    ]
+                },
+                "12": {
+                    name: "CapiGhost",
+                    image: "capiproduct12.jpg",
+                    price: "$29.99",
+                    description: "The elusive ghost capybara, rarely seen but always present. Comes with mystery rewards and stealth perks.",
+                    details: [
+                        "Phantom edition of 100 copies",
+                        "Includes commercial usage rights",
+                        "9% royalty on secondary sales",
+                        "Mystery reward system",
+                        "Stealth mode in community"
+                    ]
+                }
+                
+            };
+
+            if (selectedProduct && products[selectedProduct]) {
+                const product = products[selectedProduct];
+                
+                productContainer.innerHTML = `
+                    <div class="product-details">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="product-image-container">
+                                    <img src="${product.image}" alt="${product.name}" class="img-fluid product-image">
+                                    <div class="badges">
+                                        <span class="badge bg-primary">Limited Edition</span>
+                                        <span class="badge bg-success">Verified</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="product-info">
+                                    <h1 class="product-title">${product.name}</h1>
+                                    <div class="price-section">
+                                        <span class="current-price">${product.price}</span>
+                                        <span class="original-price">$24.99</span>
+                                        <span class="discount">20% OFF</span>
+                                    </div>
+                                    <p class="product-description">${product.description}</p>
+                                    
+                                    <div class="product-features">
+                                        <h4>Features:</h4>
+                                        <ul>
+                                            ${product.details.map(detail => `<li>${detail}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="action-buttons mt-4">
+                                        <button class="btn btn-primary btn-lg me-3">
+                                            <i class="bi bi-cart3"></i> Add to Cart
+                                        </button>
+                                        <button class="btn btn-outline-secondary btn-lg">
+                                            <i class="bi bi-heart"></i> Wishlist
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="delivery-info mt-4">
+                                        <div class="delivery-item">
+                                            <i class="bi bi-truck"></i>
+                                            <span>Free delivery on all NFT purchases</span>
+                                        </div>
+                                        <div class="delivery-item">
+                                            <i class="bi bi-shield-check"></i>
+                                            <span>Guaranteed authenticity with blockchain verification</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                productContainer.innerHTML = `
+                    <div class="text-center py-5">
+                        <div class="alert alert-warning">
+                            <h3>Product Not Found</h3>
+                            <p>The product you're looking for doesn't exist or has been moved.</p>
+                            <a href="index.html#products" class="btn btn-primary mt-3">
+                                Back to Products
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    </script>
+    <script>
+        // Enhanced notification system
+        function showNotification(message, type = 'success') {
+            // Remove any existing notifications first
+            const existingNotifs = document.querySelectorAll('.notification');
+            existingNotifs.forEach(notif => notif.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="bi ${type === 'success' ? 'bi-check-circle' : 'bi-info-circle'} me-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => notification.remove(), 500);
+            }, 2500);
+        }
+
+        // Button handlers with error prevention
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.action-buttons .btn-primary')) {
+                    showNotification('Added to cart successfully!');
+                }
+                if (e.target.closest('.action-buttons .btn-outline-secondary')) {
+                    showNotification('Added to wishlist!', 'info');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
