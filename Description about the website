@@ -1,0 +1,35 @@
+CapyNFT Marketplace Website Summary
+The CapyNFT marketplace combines fun and professional vibes to attract NFT collectors and ensure the website is easy to use. The team picked a blue color scheme (#4e73df) because it looks trustworthy and tech-savvy. They added rounded corners and gentle shadows to make the website feel welcoming. Product cards include:
+- Cool hover animations (like lifting and zooming effects) to make exploring fun
+- Easy-to-read pricing and badges for quick decisions
+- Responsive designs that adjust smoothly between mobile and desktop
+- Clear and simple navigation on all pages
+- A design that prioritizes NFT images and essential info.
+
+The product pages focus entirely on the NFT artwork, showing important info in expandable sections. Hover effects are designed with CSS transforms for seamless performance.
+
+Who It's For: The website targets:
+- NFT collectors (ages 18-45) looking for cool digital art
+- Crypto enthusiasts who enjoy lighthearted investments
+- Fans of capybaras and animal-themed artwork
+- Beginners who want easy explanations about buying NFTs.
+
+It also appeals to:
+- Social media users sharing quirky digital items
+- Budget-conscious investors entering the NFT world
+- Artists diving into capybara-themed art.
+
+Challenges Solved: Here’s how the team tackled difficulties:
+- Consistency: Mixing playful capybara branding with sleek e-commerce tools required creative solutions. They balanced it with mascot branding and clean designs.
+- Mobile Optimization: Spacing issues were fixed using Bootstrap grids and customized media queries.
+- Hover Issues: Early hover effects interfered with touch actions on mobile, but the team solved this with touch-friendly CSS.
+- Speed: Pages were slow at first, so the team sped things up by:- Adding lazy loading
+- Compressing images
+- Using CSS instead of JavaScript for animations.
+
+- Navigation: Testers found it tricky to move between marketplace and product pages. To fix this, the team added:- Always-visible back buttons
+- Breadcrumb navigation (for desktop)
+- A better-organized mobile menu.
+
+
+The end result is a website that mixes fun capybara designs with smooth e-commerce features. Future updates might include AR previews and better social sharing tools to keep users engaged.
